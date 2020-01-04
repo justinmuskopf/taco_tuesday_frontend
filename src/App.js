@@ -3,6 +3,7 @@ import React from 'react';
 import taco from './taco.svg'
 import './App.css';
 import OrderLineChart from "./components/OrderLineChart";
+import TacoCountBarChart from "./components/TacoCountBarChart";
 
 function App() {
     return (
@@ -14,6 +15,10 @@ function App() {
                     <div>All Full Orders</div>
                     <div className="Chart-general">
                         <OrderLineChart/>
+                    </div>
+                    <div>All Tacos Ordered</div>
+                    <div className="Chart-general">
+                        <TacoCountBarChart/>
                     </div>
                 </div>
             </header>
