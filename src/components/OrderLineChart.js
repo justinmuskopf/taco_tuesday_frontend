@@ -5,13 +5,19 @@ import TacoTuesdayApiHelper from '../TacoTuesdayApiHelper'
 export default class OrderLineChart extends PureComponent {
     constructor(props) {
         super(props);
+
+        TacoTuesdayApiHelper.getInstance().subscribeToFullOrders(this.updateData);
+
         this.state = {
             data: []
         }
     }
 
+    updateData = (data) => this.setState({data: data, timestamp: Date.now()});
+
     componentDidMount() {
-        TacoTuesdayApiHelper.getAllFullOrders().then(data => this.setState({data: data}));
+        //this.setState({data: TacoTuesdayApiHelper.fullOrders})
+        //TacoTuesdayApiHelper.getAllFullOrders().then(data => this.setState({data: data}));
     }
 
     render() {

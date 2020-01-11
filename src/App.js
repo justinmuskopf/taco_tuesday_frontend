@@ -4,6 +4,9 @@ import taco from './taco.svg'
 import './App.css';
 import OrderLineChart from "./components/OrderLineChart";
 import TacoCountBarChart from "./components/TacoCountBarChart";
+import TacoTuesdayApiHelper from "./TacoTuesdayApiHelper";
+
+let ApiHelper = new TacoTuesdayApiHelper();
 
 function App() {
     return (
@@ -14,11 +17,11 @@ function App() {
                 <div>
                     <div>All Full Orders</div>
                     <div className="Chart-general">
-                        <OrderLineChart/>
+                        <OrderLineChart apiHelper={ApiHelper}/>
                     </div>
                     <div>All Tacos Ordered</div>
                     <div className="Chart-general">
-                        <TacoCountBarChart/>
+                        <TacoCountBarChart fullOrders={TacoTuesdayApiHelper.fullOrders}/>
                     </div>
                 </div>
             </header>
