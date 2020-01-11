@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {CartesianGrid, Legend, Bar, BarChart, Tooltip, Label, XAxis, YAxis,} from 'recharts';
 import TacoTuesdayApiHelper from '../TacoTuesdayApiHelper'
+import TTCounter from "./TTCounter";
 
 
 export default class TacoCountBarChart extends Component {
@@ -8,7 +9,7 @@ export default class TacoCountBarChart extends Component {
         super(props);
 
         this.apiHelper = TacoTuesdayApiHelper.getInstance();
-        this.apiHelper.subscribeToOrderSummary(this.test);
+        this.apiHelper.subscribeToOrderSummary(this.updateData);
 
         this.state = {
             data: []
@@ -16,10 +17,6 @@ export default class TacoCountBarChart extends Component {
     }
 
     apiHelper;
-
-    componentDidMount() {
-        //TacoTuesdayApiHelper.fetchOrderSummary();
-    }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevState.timestamp === this.state.timestamp) {
@@ -39,11 +36,14 @@ export default class TacoCountBarChart extends Component {
         this.setState({tacos: tacoCounts});
     }
 
-    test = (data) => this.setState({data: data.tacos, timestamp: Date.now()});
+    updateData = (data) => this.setState({data: data.tacos, timestamp: Date.now()});
 
     render() {
-        console.log("render?");
         return (
+            <div className="Chart-general">
+            <h1>
+                <TTCounter field="tacoCount" suffix=" tacos eaten."/>
+            </h1>
             <BarChart width={800} height={300} data={this.state.tacos}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name"/>
@@ -52,6 +52,7 @@ export default class TacoCountBarChart extends Component {
                 <Legend />
                 <Bar dataKey="count" fill="#8884d8" />
             </BarChart>
+            </div>
         )
     }
 }

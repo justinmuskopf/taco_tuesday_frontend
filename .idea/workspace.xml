@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eedc9d3-6ae4-4fd8-8db2-563e5e632d6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/TotalTacoCountup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TTCounter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TacoTuesdayApiHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TacoTuesdayApiHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/OrderLineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrderLineChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TacoCountBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TacoCountBarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TotalTacoCountup.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +91,7 @@
       <workItem from="1578359563386" duration="543000" />
       <workItem from="1578360127912" duration="2294000" />
       <workItem from="1578367305566" duration="10284000" />
-      <workItem from="1578771105794" duration="6612000" />
+      <workItem from="1578771105794" duration="10983000" />
     </task>
     <servers />
   </component>
@@ -201,10 +199,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="767" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.-4.1920.1040/-1920.-4.1920.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1578773772650" />
-    <state x="581" y="41" width="758" height="957" key="find.popup" timestamp="1578778103108">
+    <state x="-1672" y="-30" width="1526" height="1021" maximized="true" key="dock-window-1" timestamp="1578781419125">
+      <screen x="-1920" y="-4" width="1920" height="1080" />
+    </state>
+    <state x="-1672" y="-30" width="1526" height="1021" maximized="true" key="dock-window-1/1920.-4.1920.1040/-1920.-4.1920.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1578781419125" />
+    <state x="581" y="41" width="758" height="957" key="find.popup" timestamp="1578780619059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="581" y="41" width="758" height="957" key="find.popup/1920.-4.1920.1040/-1920.-4.1920.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1578778103108" />
+    <state x="581" y="41" width="758" height="957" key="find.popup/1920.-4.1920.1040/-1920.-4.1920.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1578780619059" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1578375564229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

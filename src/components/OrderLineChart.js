@@ -1,8 +1,9 @@
-import React, {PureComponent} from 'react';
+import React, {Component} from 'react';
 import {CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis,} from 'recharts';
 import TacoTuesdayApiHelper from '../TacoTuesdayApiHelper'
+import TTCounter from "./TTCounter";
 
-export default class OrderLineChart extends PureComponent {
+export default class OrderLineChart extends Component {
     constructor(props) {
         super(props);
 
@@ -15,14 +16,13 @@ export default class OrderLineChart extends PureComponent {
 
     updateData = (data) => this.setState({data: data, timestamp: Date.now()});
 
-    componentDidMount() {
-        //this.setState({data: TacoTuesdayApiHelper.fullOrders})
-        //TacoTuesdayApiHelper.getAllFullOrders().then(data => this.setState({data: data}));
-    }
-
     render() {
         return (
-            <LineChart
+            <div className="Chart-general">
+                <h1>
+                    <TTCounter field="fullOrderCount" suffix=" orders placed."/>
+                </h1>
+                <LineChart
                 width={800}
                 height={300}
                 data={this.state.data}
@@ -38,6 +38,7 @@ export default class OrderLineChart extends PureComponent {
 
                 <Line type="monotone" dataKey="total" stroke="#8884d8" activeDot={{r: 8}}/>
             </LineChart>
+            </div>
         )
     }
 }
